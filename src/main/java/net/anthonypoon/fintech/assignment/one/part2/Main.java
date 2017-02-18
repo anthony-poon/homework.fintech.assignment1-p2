@@ -1,9 +1,12 @@
 
 package net.anthonypoon.fintech.assignment.one.part2;
 
+import com.sun.xml.internal.messaging.saaj.util.TeeInputStream;
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.io.FileReader;
+import java.io.PrintStream;
 import java.text.DecimalFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -17,6 +20,7 @@ import org.apache.commons.cli.CommandLineParser;
 import org.apache.commons.cli.DefaultParser;
 import org.apache.commons.cli.Options;
 import org.apache.commons.cli.ParseException;
+import org.apache.commons.io.output.TeeOutputStream;
 import org.apache.commons.math3.stat.regression.SimpleRegression;
 import org.jfree.ui.RefineryUtilities;
 
@@ -51,6 +55,9 @@ public class Main {
     private static String inputPath;
     private static DecimalFormat ddf = new DecimalFormat("0.000");
     public static void main(String[] args) throws Exception {
+        TeeOutputStream teeStream = new TeeOutputStream(System.out, new FileOutputStream("output.txt"));
+        PrintStream ps = new PrintStream(teeStream, true);
+        System.setOut(ps); 
         processArgs(args);
         Map<Integer, Stock> stockMap = parseFile(inputPath);
         List<Stock> stockList = new ArrayList(stockMap.values());
@@ -73,7 +80,7 @@ public class Main {
         }
         
         for (int i = 0; i < stockList.size(); i ++) {
-            System.out.println("HSCEI EK of stock #" + stockList.get(i).getCode() + "\t" + ddf.format(hsiEK.get(i)));
+            System.out.println("HSCEI EK of stock #" + stockList.get(i).getCode() + "\t" + ddf.format(hsceiEK.get(i)));
         }
     }
     

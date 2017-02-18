@@ -1,0 +1,52 @@
+Stock #6      STD = 0.196
+Stock #17     STD = 0.306
+Stock #489    STD = 0.370
+Stock #669    STD = 0.170
+Stock #883    STD = 0.285
+Stock #1211   STD = 0.489
+Stock #1299   STD = 0.228
+Stock #2318   STD = 0.327
+Stock #2388   STD = 0.264
+Stock #6837   STD = 0.484
+HSI Index STD = 0.198
+HSCEI Index STD = 0.269
+Stock #6 alpha = -0.002; beta = 0.380
+Stock #17 alpha = 0.000; beta = 0.878
+Stock #489 alpha = -0.003; beta = 0.878
+Stock #669 alpha = -0.001; beta = 0.688
+Stock #883 alpha = -0.000; beta = 0.740
+Stock #1211 alpha = 0.004; beta = 0.844
+Stock #1299 alpha = 0.004; beta = 0.860
+Stock #2318 alpha = 0.004; beta = 0.942
+Stock #2388 alpha = 0.004; beta = 0.960
+Stock #6837 alpha = 0.004; beta = 1.060
+Stock #6 alpha = -0.001; beta = 0.212
+Stock #17 alpha = 0.003; beta = 0.558
+Stock #489 alpha = 0.000; beta = 0.604
+Stock #669 alpha = 0.002; beta = 0.470
+Stock #883 alpha = 0.003; beta = 0.532
+Stock #1211 alpha = 0.007; beta = 0.650
+Stock #1299 alpha = 0.007; beta = 0.642
+Stock #2318 alpha = 0.008; beta = 0.706
+Stock #2388 alpha = 0.008; beta = 0.711
+Stock #6837 alpha = 0.008; beta = 0.806
+HSI EK of stock #6	0.182
+HSI EK of stock #17	0.252
+HSI EK of stock #489	0.327
+HSI EK of stock #669	0.102
+HSI EK of stock #883	0.244
+HSI EK of stock #1211	0.459
+HSI EK of stock #1299	0.152
+HSI EK of stock #2318	0.269
+HSI EK of stock #2388	0.184
+HSI EK of stock #6837	0.436
+HSCEI EK of stock #6	0.188
+HSCEI EK of stock #17	0.266
+HSCEI EK of stock #489	0.333
+HSCEI EK of stock #669	0.113
+HSCEI EK of stock #883	0.246
+HSCEI EK of stock #1211	0.456
+HSCEI EK of stock #1299	0.149
+HSCEI EK of stock #2318	0.266
+HSCEI EK of stock #2388	0.182
+HSCEI EK of stock #6837	0.433
