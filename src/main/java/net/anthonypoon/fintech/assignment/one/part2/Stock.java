@@ -19,6 +19,11 @@ public class Stock {
     private int stockCode;
     private List<Double> priceArray = new ArrayList();
     private String name;
+    private Double rate;
+    private Double beta;
+    private Double ek;
+    private Double exReturn;
+    private Double alpha;
     public Stock(int stockCode, String name) {
         this.stockCode = stockCode;
         this.name = name;
@@ -34,6 +39,14 @@ public class Stock {
     
     public Integer getCode () {
         return stockCode;
+    }
+
+    public Double getRate() {
+        return rate;
+    }
+
+    public void setRate(Double rate) {
+        this.rate = rate;
     }
     
     public List<Double> getRList() {
@@ -64,11 +77,6 @@ public class Stock {
         return Math.sqrt(sum / (rList.size() - 1)) * Math.sqrt(12);
     }
     
-    
-    public String toString() {
-        return "Code = " + String.valueOf(stockCode) + ";\t Name = " + name;
-    }
-
     @Override
     public boolean equals(Object obj) {
         if (obj instanceof Stock) {
@@ -77,5 +85,41 @@ public class Stock {
         } else {
             return false;
         }
-    } 
+    }
+
+    public Double getBeta() {
+        return beta;
+    }
+
+    public void setBeta(Double beta) {
+        this.beta = beta;
+    }
+
+    public Double getEK() {
+        return ek;
+    }
+
+    public void setEK(Double ek) {
+        this.ek = ek;
+    }
+
+    public Double getExReturn() {
+        return exReturn;
+    }
+
+    public void setExReturn(Double exReturn) {
+        this.exReturn = exReturn;
+    }
+
+    public Double getAlpha() {
+        return alpha;
+    }
+
+    public void setAlpha(Double alpha) {
+        this.alpha = alpha;
+    }
+    
+    public Double getExReturnToBeta() {
+        return exReturn / beta;
+    }
 }
