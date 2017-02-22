@@ -29,8 +29,25 @@ public class Stock {
         this.name = name;
     }
     
+    public Stock(Stock stock) {
+        this.stockCode = stock.getCode();
+        this.name = stock.getName();
+        for (Double price : stock.getEntry()) {
+            this.priceArray.add(price);
+        }
+        this.rate = stock.getRate();
+        this.beta = stock.getBeta();
+        this.ek = stock.getEK();
+        this.exReturn = stock.getExReturn();
+        this.alpha = stock.getAlpha();
+    }
+    
     public String getName() {
         return name;
+    }
+    
+    public List<Double> getEntry() {
+        return priceArray;
     }
     
     public void addEntry(Double price) {

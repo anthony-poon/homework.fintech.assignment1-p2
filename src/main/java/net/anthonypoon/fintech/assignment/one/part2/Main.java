@@ -101,6 +101,10 @@ public class Main {
         Portfolio hsiPortf = new Portfolio("HSI rate 1", stockList, hsiIndex, riskFreeR);
         Portfolio hsceiPortf = new Portfolio("HSCEI rate 1", stockList, hsceiIndex, riskFreeR);
         
+        for (Stock stock : stockList) {
+            stock.setBeta(0.999);
+        }
+        
         System.out.println();
         for (Stock stock : hsiPortf.getStock()) {
             System.out.println("HSI of stock#" + stock.getCode() + ": Alpha = " + ddf.format(stock.getAlpha()) + "; Beta = " + ddf.format(stock.getBeta()));

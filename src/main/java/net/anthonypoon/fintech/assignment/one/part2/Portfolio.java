@@ -20,17 +20,20 @@ import org.apache.commons.math3.stat.regression.SimpleRegression;
  */
 public class Portfolio {
     private Double riskFreeR;
-    private List<Stock> stockList;
+    private List<Stock> stockList = new ArrayList();
     private Index refIndex;
     private Double marketVar;
     private String name;
     public Portfolio(String name, List<Stock> stockList, Index index, double riskFreeR) {
         this.name = name;
-        this.stockList = stockList;
+        // dereference the list
+        for (Stock stock : stockList) {
+            this.stockList.add(new Stock(stock));
+        }
         this.riskFreeR = riskFreeR;
         this.refIndex = index;
         this.marketVar = Math.pow(refIndex.getStd(), 2);
-        for (Stock stock : stockList) {
+        for (Stock stock : this.stockList) {
             stock.setExReturn(stock.getRate() - riskFreeR);
             SimpleRegression regress = new SimpleRegression();
             List<Double> stockRList = stock.getRList();
